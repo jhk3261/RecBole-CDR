@@ -9,14 +9,14 @@ checkpoint_dir: 'saved'
 show_progress: True
 save_dataset: False
 dataset_save_path: ~
-save_dataloaders: False
-dataloaders_save_path: ~
+save_dataloaders: True
+dataloaders_save_path: '/content/save_dataloaders/dataloaders.pkl'
 log_wandb: False
 wandb_project: 'recbole_cdr'
 
 # training settings
 train_epochs: ["BOTH:300"]
-train_batch_size: 2048
+train_batch_size: 1024
 learner: adam
 learning_rate: 0.001
 neg_sampling:
@@ -41,5 +41,5 @@ metrics: ["Recall","MRR","NDCG","Hit","Precision"]
 topk: [10]
 valid_metric: MRR@10
 valid_metric_bigger: True
-eval_batch_size: 4096
+eval_batch_size: 2048
 metric_decimal_place: 4
