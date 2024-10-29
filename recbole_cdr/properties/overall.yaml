@@ -15,8 +15,8 @@ log_wandb: False
 wandb_project: 'recbole_cdr'
 
 # training settings
-train_epochs: ["BOTH:300"]
-train_batch_size: 1024
+train_epochs: ["BOTH:100"]
+train_batch_size: 512
 learner: adam
 learning_rate: 0.001
 neg_sampling:
@@ -37,9 +37,9 @@ eval_args:
   order: RO
   mode: full
 repeatable: False
-metrics: ["Recall","MRR","NDCG","Hit","Precision"]
+metrics: ["MRR","NDCG","Hit"]
 topk: [10]
 valid_metric: MRR@10
 valid_metric_bigger: True
-eval_batch_size: 2048
+eval_batch_size: 512
 metric_decimal_place: 4
