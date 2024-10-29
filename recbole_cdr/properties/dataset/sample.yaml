@@ -15,8 +15,6 @@ source_domain:
   LABEL_FIELD: label
   load_col:
     inter: [user_id, item_id, rating, review]
-    item : [user_id, item_id, price, metadata]
-    user : [user_id]
   user_inter_num_interval: "[1,inf)"
   item_inter_num_interval: "[1,inf)"
   val_interval:
@@ -35,8 +33,6 @@ target_domain:
   LABEL_FIELD: label
   load_col:
     inter: [user_id, item_id, rating, review]
-    item : [user_id, item_id, price, metadata]
-    user : [user_id]
   user_inter_num_interval: "[1,inf)"
   item_inter_num_interval: "[1,inf)"
   val_interval:
